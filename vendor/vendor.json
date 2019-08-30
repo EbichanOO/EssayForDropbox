@@ -3,6 +3,7 @@
   "heroku": {
     "install": [
       "github.com/gin-gonic/gin"
-    ]
+    ],
+    "goVersion": "go1.10.4"
   }
 }
