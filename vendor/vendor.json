@@ -1,4 +1,8 @@
 {
   "rootPath": "github.com/EbichanOO/EssayForDropbox",
-  "import": "github.com/gin-gonic/gin"
+  "heroku": {
+    "install": [
+      "github.com/gin-gonic/gin"
+    ]
+  }
 }

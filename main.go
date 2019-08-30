@@ -19,7 +19,12 @@ func main() {
 
 	router.POST("/load", Load)
 
-	router.Run(":8000")
+	port := os.Getenv("PORT")
+	if port == "" {
+					port = "3000"
+	}
+
+	router.Run(":"+port)
 }
 
 func Load(c *gin.Context) {
