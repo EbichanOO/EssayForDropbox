@@ -1,3 +1,4 @@
 {
-  "rootPath": "github.com/EbichanOO/EssayForDropbox"
+  "rootPath": "github.com/EbichanOO/EssayForDropbox",
+  "import": "github.com/gin-gonic/gin"
 }
