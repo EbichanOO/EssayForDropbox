@@ -21,7 +21,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-					port = "3000"
+		port = "3000"
 	}
 
 	router.Run(":"+port)
@@ -49,10 +49,8 @@ func get_pdf(URL,name string) (string, error){
     // API Explorer | API情報サイト
     // https://dropbox.github.io/dropbox-api-v2-explorer/#files_download
     url := URL
-    //token := c.PostForm("token") // Token write here | API情報サイトで取得したトークンを記載する
     filename := name+".pdf"
-    //param := `{ "path":"/"+filename }`
-
+    
     // Create Request | リクエスト作成
     req, err := http.NewRequest("GET", url, nil)
     if err != nil {
@@ -88,9 +86,9 @@ func get_pdf(URL,name string) (string, error){
     }()
 
     // Fill File with Body(=File's Binary) | 空ファイルにバイナリを書き込む
-		file.Write(body)
+	file.Write(body)
 
-		return filename, nil
+	return filename, nil
 }
 
 func send_pdf(token, filename string) (err error){
@@ -124,8 +122,6 @@ func send_pdf(token, filename string) (err error){
 
 	res, err := client.Do(req)
 	fmt.Println("status:", res.Status)
-	//body, _ := ioutil.ReadAll(res.Body)
-	//fmt.Println("response Body: ", string(body))
 	return err
 }
 
