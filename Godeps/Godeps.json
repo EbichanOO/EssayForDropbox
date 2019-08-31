@@ -2,6 +2,9 @@
 	"ImportPath": "github.com/EbichanOO/EssayForDropbox",
 	"GoVersion": "go1.12",
 	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/gin-contrib/sse",
