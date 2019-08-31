@@ -124,7 +124,7 @@ func send_pdf(token, filename string) (err error){
 
 	res, err := client.Do(req)
 	fmt.Println("status:", res.Status)
-	body, _ := ioutil.ReadAll(res.Body)
+	//body, _ := ioutil.ReadAll(res.Body)
 	//fmt.Println("response Body: ", string(body))
 	return err
 }
