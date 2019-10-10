@@ -19,6 +19,14 @@ func main() {
 
 	router.POST("/load", Load)
 
+	router.GET("/helloGET", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "hello "+c.Query("name")+" from GET!"})
+	})
+
+	router.POST("/helloPOST", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "hello "+c.PostForm("name")+" from POST!"})
+	})
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "3000"
